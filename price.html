@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeCoder Store</title>
+    <style>
+        :root {
+            --primary-color: #ff8c00;
+            --secondary-color: #ff6500;
+            --background-color: #1a1a1a;
+            --text-color: #ffffff;
+            --card-bg: #2a2a2a;
+            --btn-bg: #ff8c00;
+            --btn-hover: #ff6500;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            text-align: center;
+        }
+        .navbar {
+            background: var(--primary-color);
+            color: var(--background-color);
+            padding: 15px 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .product-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+            color: var(--primary-color);
+        }
+        .buy-btn {
+            background: var(--btn-bg);
+            color: var(--background-color);
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .buy-btn:hover {
+            background: var(--btn-hover);
+        }
+        .cart {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .footer {
+            background: var(--primary-color);
+            color: var(--background-color);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">VibeCoder Store</div>
+    <div class="container">
+        <h2>Our Premium Products</h2>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="images/temp.jpg" alt="Template 1">
+                <h3>Responsive Web Template</h3>
+                <p>$29.99</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/ui.jpg" alt="UI Kit">
+                <h3>Modern UI Kit</h3>
+                <p>$19.99</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/icon.jpg" alt="Icons Pack">
+                <h3>Custom Icons Pack</h3>
+                <p>$9.99</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="cart">
+            <h3>Shopping Cart</h3>
+            <p>No items added yet.</p>
+        </div>
+    </div>
+    <div class="footer">&copy; 2025 VibeCoder. All rights reserved.</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Authentication Box */
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.auth-box {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.auth-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.auth-title span {
+    color: #ff6f61;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.auth-btn {
+    background: linear-gradient(45deg, #A15CBB, #ff6f61);
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.auth-btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(45deg, #8B4B9C, #e65c50);
+}
+
+.switch-page {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.switch-page a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-page a:hover {
+    text-decoration: underline;
+}

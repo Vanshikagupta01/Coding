@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - VibeCoder</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(20, 20, 20, 0.95);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            overflow: hidden;
+        }
+
+        h2 {
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .input-group {
+            position: relative;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: transparent;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            text-align: center;
+            border: 1px solid rgba(0, 255, 255, 0.5);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+            transition: 0.3s ease-in-out;
+        }
+
+        input:focus {
+            border: 1px solid #0ff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0ff;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px #0ff;
+        }
+
+        button:hover {
+            background: #00d1d1;
+            box-shadow: 0 0 20px #00d1d1;
+        }
+
+        .message {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ff4747;
+        }
+
+        .link {
+            margin-top: 10px;
+            display: inline-block;
+            color: #0ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .link:hover {
+            text-shadow: 0 0 10px #0ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            input {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup to VibeCoder</h2>
+        <form id="signupForm">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p class="message" id="message"></p>
+        <a href="login.html" class="link">Already have an account? Login</a>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (name === "" || email === "" || password === "") {
+                document.getElementById('message').innerText = "⚠ Please fill in all fields!";
+                return;
+            }
+
+            // Store user data in localStorage
+            localStorage.setItem("vibeCoderUser", JSON.stringify({ name, email, password }));
+
+            document.getElementById('message').innerText = `🎉 Welcome, ${name}! Redirecting...`;
+            document.getElementById('message').style.color = "#0ff";
+
+            setTimeout(() => {
+                window.location.href = "login.html"; // Redirect to login
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

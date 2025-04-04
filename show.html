@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeCoder - Code Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background: #0d0d0d;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 0 12px cyan;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .code-box {
+            width: 48%;
+            background: rgba(20, 20, 20, 0.95);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            transition: 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .code-box:hover {
+            box-shadow: 0 0 25px cyan;
+            transform: translateY(-5px);
+        }
+
+        pre {
+            text-align: left;
+            background: #222;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px cyan;
+        }
+
+        code {
+            font-size: 14px;
+        }
+
+        .glow-line {
+            width: 100%;
+            height: 3px;
+            background: cyan;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 0 15px cyan;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .code-box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>🔥 VibeCoder - Code Showcase</header>
+
+    <div class="container">
+        <div class="code-box">
+            <h3>HTML Example</h3>
+            <pre><code class="language-html">
+&lt;div class="card"&gt;
+    &lt;h2&gt;Welcome to VibeCoder&lt;/h2&gt;
+    &lt;p&gt;A futuristic coding platform&lt;/p&gt;
+&lt;/div&gt;
+            </code></pre>
+            <div class="glow-line"></div>
+        </div>
+
+        <div class="code-box">
+            <h3>CSS Example</h3>
+            <pre><code class="language-css">
+.card {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid cyan;
+    padding: 15px;
+    border-radius: 10px;
+}
+            </code></pre>
+            <div class="glow-line"></div>
+        </div>
+
+        <div class="code-box">
+            <h3>JavaScript Example</h3>
+            <pre><code class="language-js">
+document.querySelector('.card').addEventListener('click', () => {
+    alert('Welcome to VibeCoder!');
+});
+            </code></pre>
+            <div class="glow-line"></div>
+        </div>
+
+        <div class="code-box">
+            <h3>Live Code Output</h3>
+            <iframe srcdoc="
+            <html>
+                <body style='background: black; color: cyan; text-align: center; font-family: sans-serif;'>
+                    <h2>VibeCoder Live Output</h2>
+                    <p>This is a sample output display</p>
+                </body>
+            </html>
+            " width="100%" height="100"></iframe>
+            <div class="glow-line"></div>
+        </div>
+    </div>
+</body>
+</html>

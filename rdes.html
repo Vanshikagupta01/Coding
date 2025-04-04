@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeCoder - Responsive Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background: #0d0d0d;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 0 12px cyan;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .info-box {
+            width: 90%;
+            background: rgba(20, 20, 20, 0.95);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            transition: 0.3s ease-in-out;
+        }
+
+        p {
+            font-size: 16px;
+            color: cyan;
+        }
+
+        .preview {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .device {
+            width: 300px;
+            height: 500px;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 20px;
+            border: 4px solid cyan;
+            box-shadow: 0 0 15px cyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: cyan;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .btn {
+            background: cyan;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px cyan;
+        }
+
+        .btn:hover {
+            background: rgba(0, 255, 255, 0.8);
+            box-shadow: 0 0 20px cyan;
+        }
+
+    </style>
+</head>
+<body>
+    <header>🌐 VibeCoder - Responsive Design</header>
+
+    <div class="container">
+        <div class="info-box">
+            <h3>Why is Responsive Design Important?</h3>
+            <p>VibeCoder ensures that your code looks perfect on all devices, from desktops to mobile screens.</p>
+        </div>
+
+        <div class="preview">
+            <div class="device">📱 Mobile View</div>
+            <div class="device">💻 Tablet View</div>
+            <div class="device">🖥 Desktop View</div>
+        </div>
+
+        <button class="btn" onclick="alert('VibeCoder Supports Full Responsiveness!')">Test Responsiveness</button>
+    </div>
+</body>
+</html>

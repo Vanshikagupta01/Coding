@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeCoder - Features</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background: #0d0d0d;
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            font-size: 26px;
+            font-weight: bold;
+            text-shadow: 0 0 10px cyan;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .feature-box {
+            background: rgba(20, 20, 20, 0.95);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            transition: 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-box:hover {
+            box-shadow: 0 0 25px cyan;
+            transform: translateY(-5px);
+        }
+
+        .feature-box h3 {
+            color: cyan;
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px cyan;
+        }
+
+        .feature-box p {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .glow-line {
+            width: 100%;
+            height: 3px;
+            background: cyan;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 0 15px cyan;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                font-size: 20px;
+            }
+
+            .feature-box {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>VibeCoder - Amazing Features</header>
+    <div class="container">
+        <div class="feature-box">
+            <h3>🔥 Code Showcase</h3>
+           <a href="show.html"><p>Display your best HTML, CSS, and JavaScript projects with a stunning interface.</p></a>
+            <div class="glow-line"></div>
+        </div>
+
+        <div class="feature-box">
+            <h3>🚀 Live Preview</h3>
+            <a href="lpre.html"><p>View your code output in real time without refreshing the page.</p></a>
+            <div class="glow-line"></div>
+        </div>
+
+        <div class="feature-box">
+            <h3>🌐 Responsive Design</h3>
+            <a href="rdes.html"><p>All projects look great on mobile, tablets, and desktops.</p></a>
+            <div class="glow-line"></div>
+        </div>
+
+        <div class="feature-box">
+            <h3>🔧 Customizable UI</h3>
+           <a href="ui.html"><p>Modify themes, fonts, and colors to match your coding style.</p></a>
+            <div class="glow-line"></div>
+        </div>
+
+        <div class="feature-box">
+            <h3>🎨 Dark Mode</h3>
+            <p>Protect your eyes with a futuristic black neon UI.</p>
+            <div class="glow-line"></div>
+        </div>
+
+        <div class="feature-box">
+            <h3>📂 Project Sharing</h3>
+           <a href="share.html"><p>Share your projects with a unique link and collaborate with others.</p></a>
+            <div class="glow-line"></div>
+        </div>
+    </div>
+</body>
+</html>

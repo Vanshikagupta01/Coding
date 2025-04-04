@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeCoder - Project Sharing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background: #0d0d0d;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 0 12px cyan;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(20, 20, 20, 0.95);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-size: 16px;
+            color: cyan;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid cyan;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .btn {
+            background: cyan;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px cyan;
+        }
+
+        .btn:hover {
+            background: rgba(0, 255, 255, 0.8);
+            box-shadow: 0 0 20px cyan;
+        }
+
+        .projects {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .project-card {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px cyan;
+        }
+
+        .project-card h3 {
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <header>🔥 VibeCoder - Share Your Project</header>
+
+    <div class="container">
+        <div class="input-group">
+            <label for="title">Project Title:</label>
+            <input type="text" id="title" placeholder="Enter project title">
+        </div>
+
+        <div class="input-group">
+            <label for="description">Project Description:</label>
+            <textarea id="description" rows="4" placeholder="Describe your project"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="link">Project URL:</label>
+            <input type="url" id="link" placeholder="Enter project link">
+        </div>
+
+        <button class="btn" onclick="addProject()">🚀 Share Project</button>
+
+        <div class="projects">
+            <h2>🛠 Shared Projects</h2>
+            <div id="projectList"></div>
+        </div>
+    </div>
+
+    <script>
+        function addProject() {
+            let title = document.getElementById("title").value;
+            let description = document.getElementById("description").value;
+            let link = document.getElementById("link").value;
+
+            if (title === "" || description === "" || link === "") {
+                alert("Please fill all fields before sharing!");
+                return;
+            }
+
+            let projectList = document.getElementById("projectList");
+            let projectCard = document.createElement("div");
+            projectCard.classList.add("project-card");
+            projectCard.innerHTML = `
+                <h3>${title}</h3>
+                <p>${description}</p>
+                <a href="${link}" target="_blank" style="color: cyan;">🔗 View Project</a>
+            `;
+
+            projectList.appendChild(projectCard);
+
+            // Clear inputs
+            document.getElementById("title").value = "";
+            document.getElementById("description").value = "";
+            document.getElementById("link").value = "";
+        }
+    </script>
+</body>
+</html>
