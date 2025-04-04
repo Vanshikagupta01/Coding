@@ -94,29 +94,31 @@
         <h2>Our Premium Products</h2>
         <div class="product-list">
             <div class="product-card">
-                <img src="images/temp.jpg" alt="Template 1">
+                <img src="images/temp.jpg" alt="Template">
                 <h3>Responsive Web Template</h3>
                 <p>$29.99</p>
-                <button class="buy-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="checkout()">Buy Now</button>
             </div>
             <div class="product-card">
                 <img src="images/ui.jpg" alt="UI Kit">
                 <h3>Modern UI Kit</h3>
                 <p>$19.99</p>
-                <button class="buy-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="checkout()">Buy Now</button>
             </div>
             <div class="product-card">
                 <img src="images/icon.jpg" alt="Icons Pack">
                 <h3>Custom Icons Pack</h3>
                 <p>$9.99</p>
-                <button class="buy-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="checkout()">Buy Now</button>
             </div>
-        </div>
-        <div class="cart">
-            <h3>Shopping Cart</h3>
-            <p>No items added yet.</p>
         </div>
     </div>
     <div class="footer">&copy; 2025 VibeCoder. All rights reserved.</div>
+
+    <script>
+        function checkout() {
+            window.location.href = "https://buy.stripe.com/test_eVacOZ1u517O1eE145";
+        }
+    </script>
 </body>
 </html>
